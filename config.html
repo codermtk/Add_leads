@@ -1,0 +1,71 @@
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.init({
+            //Poned aquí vuestro chatflow id
+            chatflowid: "2b382e6f-ea21-4d0d-9367-48d7e2b90340",
+            //Poned aquí vuestro apiHost
+            apiHost: "http://localhost:3000",
+            chatflowConfig: {
+                // topK: 2
+            },
+            theme: {
+                button: {
+                    // Color del botón
+                    backgroundColor: "#3B81F6",
+                    // Espacio de separación del botón
+                    right: 20,
+                    bottom: 20,
+                    // Tamaño: small, medium, large
+                    size: "medium",
+                    // Color del icono de recargar y de dropdown 
+                    iconColor: "white",
+                    // Logo del botón
+                    customIconSrc: "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
+                },
+                chatWindow: {
+                    // Mensaje inicial
+                    welcomeMessage: "¡Hola! Hoy seré tu asistente virtual.",
+                    //Color de fondo del chat
+                    backgroundColor: "#ffffff",
+                    //Altura del chat
+                    height: 1000,
+                    //Anchura del chat
+                    width: 400,
+                    //Tamaño de la letra
+                    fontSize: 22,
+                    //Color del texto de Powered by Flowise
+                    poweredByTextColor: "#ffffff",
+                    botMessage: {
+                        //Color de la caja del mensaje del bot
+                        backgroundColor: "#f7f8ff",
+                        //Color del texto del mensaje del bot
+                        textColor: "#303235",
+                        //Determina si se muestra el abatar del bot (true/false)
+                        showAvatar: true,
+                        //La foto de perfil que aparece a la izquierda del bot
+                        avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png",
+                    },
+                    userMessage: {
+                        //Color de la caja del mensaje del usuario
+                        backgroundColor: "#3B81F6",
+                        //Color del texto del mensaje del usuario
+                        textColor: "#ffffff",
+                        //Determina si se muestra el avatar del usuario (true/false)
+                        showAvatar: true,
+                        //La foto de perfil que aparece al lado de los mensajes del usuario
+                        avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+                    },
+                    textInput: {
+                        //El texto que aparece en el input de texto
+                        placeholder: "Type your question",
+                        //El color de fondo del text input
+                        backgroundColor: "#ffffff",
+                        //El color del texto que aparece en el text input
+                        textColor: "#303235",
+                        //El color del botón de enviar un mensaje
+                        sendButtonColor: "#3B81F6",
+                    }
+                }
+            }
+        })
+    </script>
